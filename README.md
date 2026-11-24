@@ -8,7 +8,7 @@ A fresh student-team portfolio introducing the members, interests, projects and 
 
 <p>
   <a href="https://lokilancer.github.io/TMMV-ROBOTICS"><strong>VISIT THE WEBSITE ↗</strong></a> ·
-  <a href="https://github.com/lokilancer/TMMV-Robotics"><strong>VIEW SOURCE CODE</strong></a>
+  <a href="https://github.com/lokilancer/TMMV-ROBOTICS"><strong>VIEW SOURCE CODE</strong></a>
 </p>
 
 ![Hosting](https://img.shields.io/badge/Hosting-GitHub%20Pages-292b23?style=for-the-badge&logo=github)
@@ -66,14 +66,14 @@ Clone the repository and open `index.html` in a modern browser. No package insta
 
 ```bash
 git clone https://github.com/lokilancer/TMMV-Robotics.git
-cd TMMV-Robotics
+cd TMMV-ROBOTICS
 ```
 
 ## Deployment
 
 The site is published with GitHub Pages:
 
-[https://lokilancer.github.io/TMMV-Robotics/](https://lokilancer.github.io/TMMV-ROBOTICS/)
+[https://lokilancer.github.io/TMMV-ROBOTICS/](https://lokilancer.github.io/TMMV-ROBOTICS/)
 
 ---
 
