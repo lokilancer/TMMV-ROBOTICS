@@ -11,8 +11,10 @@ A fresh student-team portfolio introducing the members, interests, projects and 
   <a href="https://github.com/lokilancer/TMMV-ROBOTICS"><strong>VIEW SOURCE CODE</strong></a>
 </p>
 
-![Hosting](https://img.shields.io/badge/Hosting-GitHub%20Pages-292b23?style=for-the-badge&logo=github)
-![Stack](https://img.shields.io/badge/HTML-CSS-JavaScript-777d4b?style=for-the-badge)
+<p>
+  <img src="https://img.shields.io/badge/Hosting-GitHub%20Pages-292b23?style=for-the-badge&amp;logo=github" alt="Hosting: GitHub Pages">
+  <img src="https://img.shields.io/badge/Stack-HTML--CSS--JavaScript-777d4b?style=for-the-badge" alt="Stack: HTML, CSS and JavaScript">
+</p>
 
 </div>
 
