@@ -7,7 +7,7 @@
 A fresh student-team portfolio introducing the members, interests, projects and shared experiences of TMMV Robotics.
 
 <p>
-  <a href="https://lokilancer.github.io/TX10-portfolio/"><strong>VISIT THE WEBSITE ↗</strong></a> ·
+  <a href="https://lokilancer.github.io/TMMV-ROBOTICS/"><strong>VISIT THE WEBSITE ↗</strong></a> ·
   <a href="https://github.com/lokilancer/TMMV-Robotics"><strong>VIEW SOURCE CODE</strong></a>
 </p>
 
@@ -73,7 +73,7 @@ cd TMMV-Robotics
 
 The site is published with GitHub Pages:
 
-https://lokilancer.github.io/TMMV-Robotics/
+[https://lokilancer.github.io/TMMV-Robotics/](https://lokilancer.github.io/TMMV-ROBOTICS/)
 
 ---
 
