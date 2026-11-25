@@ -167,3 +167,31 @@ body.theme-dark .button-light{background:#e9e0d2;color:#282820}
 @keyframes wire-two-separate{0%,12%,88%,100%{transform:rotate(-22deg) translateZ(38px)}32%,68%{transform:rotate(-22deg) translateZ(70px) translateX(-25px)}}
 @media(max-width:600px){.exploded-car{transform:translate(-50%,-50%) rotate(-22deg) scale(.82)}.exploded-caption{left:9px;top:10px;font-size:8px}.exploded-note{font-size:7px;right:7px}}
 @media(prefers-reduced-motion:reduce){.exploded-part,.part-label{animation:none!important}}
+
+/* Visibility and clear 2D exploded motion fallback */
+.exploded-scene{display:block!important;opacity:1!important;visibility:visible!important;z-index:2!important}
+.exploded-scene .exploded-car{width:290px;height:260px;transform:translate(-50%,-50%)!important;transform-style:flat!important}
+.exploded-scene .exploded-part{position:absolute!important;display:block!important;visibility:visible!important;opacity:1!important;animation-duration:6s!important;animation-timing-function:ease-in-out!important;animation-iteration-count:infinite!important;animation-fill-mode:both!important;transform-style:flat!important}
+.exploded-scene .part-chassis{animation-name:move-chassis!important}
+.exploded-scene .part-deck{animation-name:move-deck!important}
+.exploded-scene .part-esp{animation-name:move-esp!important}
+.exploded-scene .part-sensor{animation-name:move-sensor!important}
+.exploded-scene .part-battery{animation-name:move-battery!important}
+.exploded-scene .wheel-a{animation-name:move-wheel-a!important}.exploded-scene .wheel-b{animation-name:move-wheel-b!important}.exploded-scene .wheel-c{animation-name:move-wheel-c!important}.exploded-scene .wheel-d{animation-name:move-wheel-d!important}
+.exploded-scene .wire-one{animation-name:move-wire-a!important}.exploded-scene .wire-two{animation-name:move-wire-b!important}
+@keyframes move-chassis{0%,18%,82%,100%{translate:0 0}38%,62%{translate:0 35px}}
+@keyframes move-deck{0%,18%,82%,100%{translate:0 0}38%,62%{translate:0 -35px}}
+@keyframes move-esp{0%,18%,82%,100%{translate:0 0}38%,62%{translate:0 -95px}}
+@keyframes move-sensor{0%,18%,82%,100%{translate:0 0}38%,62%{translate:0 -145px}}
+@keyframes move-battery{0%,18%,82%,100%{translate:0 0}38%,62%{translate:0 95px}}
+@keyframes move-wheel-a{0%,18%,82%,100%{translate:0 0}38%,62%{translate:-58px -45px}}
+@keyframes move-wheel-b{0%,18%,82%,100%{translate:0 0}38%,62%{translate:58px -45px}}
+@keyframes move-wheel-c{0%,18%,82%,100%{translate:0 0}38%,62%{translate:-58px 45px}}
+@keyframes move-wheel-d{0%,18%,82%,100%{translate:0 0}38%,62%{translate:58px 45px}}
+@keyframes move-wire-a{0%,18%,82%,100%{translate:0 0}38%,62%{translate:32px -30px}}
+@keyframes move-wire-b{0%,18%,82%,100%{translate:0 0}38%,62%{translate:-30px 28px}}
+.exploded-scene .part-label{animation:none!important;opacity:1!important;visibility:visible!important}
+.exploded-scene .exploded-caption,.exploded-scene .exploded-note{z-index:20}
+.exploded-scene .part-chassis,.exploded-scene .part-deck,.exploded-scene .part-esp,.exploded-scene .part-sensor,.exploded-scene .part-battery,.exploded-scene .part-wheel{box-sizing:border-box}
+@media(max-width:600px){.exploded-scene .exploded-car{transform:translate(-50%,-50%) scale(.78)!important}}
+@media(prefers-reduced-motion:reduce){.exploded-scene .exploded-part{animation:none!important;translate:0 0!important}}
