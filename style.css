@@ -114,3 +114,56 @@ body.theme-dark .button-light{background:#e9e0d2;color:#282820}
 
 /* Use the rover scene in place of the previous abstract robot artwork */
 .art-stage>.art-sun,.art-stage>.art-ring,.art-stage>.robot-drawing{display:none}
+
+/* Exploded-view robot car: components lift apart, pause, then reassemble */
+.exploded-scene{overflow:hidden;background:radial-gradient(ellipse at 50% 52%,#f7edda 0,#e5dac9 62%,#dfd1bd 100%)}
+.exploded-scene:before{opacity:.42}
+.exploded-caption,.exploded-note{position:absolute;z-index:5;font:9px var(--mono);letter-spacing:1.1px;color:#6b6d4d;background:#f4efe6dc;border:1px solid #777d4b55;padding:7px 9px}
+.exploded-caption{left:16px;top:15px}.exploded-note{right:12px;bottom:13px;font-size:8px}
+.exploded-floor{position:absolute;left:50%;top:56%;width:300px;height:180px;transform:translate(-50%,-50%) rotate(-18deg);border:1px dashed #777d4b66;border-radius:50%;box-shadow:0 0 0 25px #777d4b09}
+.exploded-car{position:absolute;left:50%;top:52%;width:290px;height:260px;transform:translate(-50%,-50%) rotate(-22deg);transform-style:preserve-3d}
+.exploded-part{position:absolute;transform-style:preserve-3d;animation:part-explode 7s cubic-bezier(.4,0,.2,1) infinite;will-change:transform}
+.part-chassis{left:45px;top:91px;width:200px;height:105px;border-radius:18px;background:linear-gradient(145deg,#45483d,#252720);border:3px solid #171913;box-shadow:0 12px 0 #171913;transform:translateZ(8px)}
+.part-chassis i{position:absolute;width:7px;height:7px;border-radius:50%;background:#d5b66c;border:1px solid #6c5832}
+.part-chassis i:nth-child(1){left:10px;top:10px}.part-chassis i:nth-child(2){right:10px;top:10px}.part-chassis i:nth-child(3){left:10px;bottom:10px}.part-chassis i:nth-child(4){right:10px;bottom:10px}
+.part-deck{left:56px;top:82px;width:178px;height:85px;border-radius:13px;background:linear-gradient(135deg,#f4efe6,#d5c8b5);border:3px solid #292b23;box-shadow:inset 0 0 0 5px #cfc2af;transform:translateZ(28px)}
+.part-deck i{position:absolute;width:6px;height:6px;border-radius:50%;background:#777d4b;border:1px solid #292b23}.part-deck i:nth-child(1){left:8px;top:7px}.part-deck i:nth-child(2){right:8px;top:7px}.part-deck i:nth-child(3){left:8px;bottom:7px}.part-deck i:nth-child(4){right:8px;bottom:7px}
+.part-wheel{width:31px;height:77px;border-radius:12px;background:repeating-linear-gradient(0deg,#242620 0 8px,#44463d 8px 12px);border:4px solid #181a15;box-shadow:0 5px 0 #11130f;transform:translateZ(5px)}
+.part-wheel span{position:absolute;left:50%;top:50%;width:12px;height:12px;transform:translate(-50%,-50%);border-radius:50%;background:#c45b3e;border:3px solid #e5d8c4}
+.wheel-a{left:24px;top:82px}.wheel-b{right:24px;top:82px}.wheel-c{left:24px;top:116px}.wheel-d{right:24px;top:116px}
+.part-esp{left:99px;top:104px;width:92px;height:51px;border-radius:6px;background:#247b65;border:3px solid #174e42;box-shadow:0 4px 0 #143d34;display:flex;align-items:center;justify-content:center;transform:translateZ(45px)}
+.esp-chip{font:700 11px var(--mono);color:#e8f1d8;background:#273b35;padding:7px 8px;border:1px solid #91b79d}.esp-usb{position:absolute;left:-7px;top:12px;width:9px;height:23px;background:#c7c7b5;border:2px solid #777d70;border-radius:2px}.esp-pins{position:absolute;left:8px;right:8px;bottom:-7px;height:5px;background:repeating-linear-gradient(90deg,#d9b96d 0 4px,transparent 4px 9px)}
+.part-sensor{left:103px;top:54px;width:85px;height:23px;border-radius:5px;background:#292b23;border:2px solid #151711;display:flex;align-items:center;justify-content:space-evenly;transform:translateZ(55px)}
+.part-sensor span{width:13px;height:13px;border-radius:50%;background:#d9e4db;border:3px solid #c45b3e;box-shadow:0 0 8px #c45b3e55}
+.part-battery{left:102px;top:173px;width:86px;height:39px;border-radius:5px;background:#34362e;border:2px solid #181a15;color:#f0d9b5;display:grid;place-items:center;font:8px var(--mono);letter-spacing:1px;transform:translateZ(22px)}
+.part-wire{width:70px;height:4px;border-radius:4px;background:#c45b3e;transform:translateZ(38px);transform-origin:left}
+.wire-one{left:176px;top:130px;transform:rotate(24deg) translateZ(38px)}.wire-two{left:98px;top:142px;background:#777d4b;transform:rotate(-22deg) translateZ(38px)}
+.part-label{position:absolute;z-index:6;padding:6px 8px;background:#f4efe6e8;border:1px solid #777d4b55;color:#606443;font:8px var(--mono);letter-spacing:.7px;white-space:nowrap;animation:label-float 7s ease-in-out infinite}
+.label-chassis{left:2px;top:190px}.label-wheels{right:-8px;top:201px}.label-board{right:-16px;top:93px}.label-sensors{left:4px;top:43px}.label-power{left:93px;bottom:2px}
+.exploded-axis{position:absolute;left:50%;top:50%;width:1px;height:225px;background:linear-gradient(transparent,#c45b3e55,transparent);transform:translate(-50%,-50%) rotate(30deg);z-index:-1}
+@keyframes part-explode{
+  0%,12%,88%,100%{translate:0 0;filter:none}
+  32%,68%{filter:drop-shadow(0 8px 5px #292b231b)}
+}
+@keyframes label-float{0%,12%,88%,100%{opacity:.55}32%,68%{opacity:1}}
+/* Individual components fan outward during the exploded phase */
+.part-chassis{animation-name:chassis-separate}
+.part-deck{animation-name:deck-separate}
+.part-esp{animation-name:board-separate}
+.part-sensor{animation-name:sensor-separate}
+.part-battery{animation-name:battery-separate}
+.wheel-a{animation-name:wheel-a-separate}.wheel-b{animation-name:wheel-b-separate}.wheel-c{animation-name:wheel-c-separate}.wheel-d{animation-name:wheel-d-separate}
+.wire-one{animation-name:wire-one-separate}.wire-two{animation-name:wire-two-separate}
+@keyframes chassis-separate{0%,12%,88%,100%{transform:translateZ(8px)}32%,68%{transform:translateZ(-35px) translateY(18px)}}
+@keyframes deck-separate{0%,12%,88%,100%{transform:translateZ(28px)}32%,68%{transform:translateZ(90px) translateY(-5px)}}
+@keyframes board-separate{0%,12%,88%,100%{transform:translateZ(45px)}32%,68%{transform:translateZ(145px) translateY(-15px)}}
+@keyframes sensor-separate{0%,12%,88%,100%{transform:translateZ(55px)}32%,68%{transform:translateZ(185px) translateY(-25px)}}
+@keyframes battery-separate{0%,12%,88%,100%{transform:translateZ(22px)}32%,68%{transform:translateZ(-75px) translateY(40px)}}
+@keyframes wheel-a-separate{0%,12%,88%,100%{transform:translateZ(5px)}32%,68%{transform:translateZ(50px) translateX(-32px) translateY(-25px)}}
+@keyframes wheel-b-separate{0%,12%,88%,100%{transform:translateZ(5px)}32%,68%{transform:translateZ(50px) translateX(32px) translateY(-25px)}}
+@keyframes wheel-c-separate{0%,12%,88%,100%{transform:translateZ(5px)}32%,68%{transform:translateZ(50px) translateX(-32px) translateY(25px)}}
+@keyframes wheel-d-separate{0%,12%,88%,100%{transform:translateZ(5px)}32%,68%{transform:translateZ(50px) translateX(32px) translateY(25px)}}
+@keyframes wire-one-separate{0%,12%,88%,100%{transform:rotate(24deg) translateZ(38px)}32%,68%{transform:rotate(24deg) translateZ(70px) translateX(25px)}}
+@keyframes wire-two-separate{0%,12%,88%,100%{transform:rotate(-22deg) translateZ(38px)}32%,68%{transform:rotate(-22deg) translateZ(70px) translateX(-25px)}}
+@media(max-width:600px){.exploded-car{transform:translate(-50%,-50%) rotate(-22deg) scale(.82)}.exploded-caption{left:9px;top:10px;font-size:8px}.exploded-note{font-size:7px;right:7px}}
+@media(prefers-reduced-motion:reduce){.exploded-part,.part-label{animation:none!important}}
