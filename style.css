@@ -111,3 +111,6 @@ body.theme-dark .button-light{background:#e9e0d2;color:#282820}
 @media(max-width:900px){.robot-car{transform:translate(-50%,-50%) rotateX(57deg) rotateZ(-27deg) scale(.88)}.label-esp{left:9px}.label-sensor{right:8px}}
 @media(max-width:600px){.robot-car-scene{min-height:330px}.robot-car{transform:translate(-50%,-50%) rotateX(57deg) rotateZ(-27deg) scale(.82)}.scene-label{font-size:8px}}
 @media(prefers-reduced-motion:reduce){.robot-car,.scan-beam{animation:none!important}}
+
+/* Use the rover scene in place of the previous abstract robot artwork */
+.art-stage>.art-sun,.art-stage>.art-ring,.art-stage>.robot-drawing{display:none}
