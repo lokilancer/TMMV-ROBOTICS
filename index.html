@@ -58,18 +58,28 @@
         </div>
         <div class="hero-art" aria-label="Abstract robot illustration">
           <div class="art-topline"><span>FIG. 01</span><span>ROBOTICS / TMMV</span></div>
-          <div class="art-stage"><div class="robot-car-scene" aria-label="Animated 3D-style ESP32 robot car">
-              <div class="scan-beam"></div><div class="scan-beam scan-beam-two"></div>
-              <div class="robot-car">
-                <div class="car-wheel wheel-left"><i></i></div><div class="car-wheel wheel-right"><i></i></div>
-                <div class="car-chassis"><span class="chassis-edge"></span></div>
-                <div class="car-deck"><span class="deck-screw screw-one"></span><span class="deck-screw screw-two"></span><span class="deck-screw screw-three"></span><span class="deck-screw screw-four"></span></div>
-                <div class="esp32-board"><span class="board-chip">ESP32</span><span class="board-port"></span><span class="board-pin pin-one"></span><span class="board-pin pin-two"></span><span class="board-pin pin-three"></span><span class="board-pin pin-four"></span></div>
-                <div class="sensor-bar"><span class="sensor-eye"></span><span class="sensor-eye"></span><span class="sensor-eye"></span></div>
-                <div class="car-led"></div>
+          <div class="art-stage"><div class="robot-car-scene exploded-scene" aria-label="Animated exploded-view robot car showing its components">
+              <div class="exploded-caption">ROBOT CAR / EXPLODED VIEW</div>
+              <div class="exploded-floor"></div>
+              <div class="exploded-car">
+                <div class="exploded-part part-wheel wheel-a"><span></span></div>
+                <div class="exploded-part part-wheel wheel-b"><span></span></div>
+                <div class="exploded-part part-wheel wheel-c"><span></span></div>
+                <div class="exploded-part part-wheel wheel-d"><span></span></div>
+                <div class="exploded-part part-chassis"><i></i><i></i><i></i><i></i></div>
+                <div class="exploded-part part-deck"><i></i><i></i><i></i><i></i></div>
+                <div class="exploded-part part-esp"><span class="esp-chip">ESP32</span><span class="esp-usb"></span><span class="esp-pins"></span></div>
+                <div class="exploded-part part-sensor"><span></span><span></span></div>
+                <div class="exploded-part part-battery"><span>POWER</span></div>
+                <div class="exploded-part part-wire wire-one"></div><div class="exploded-part part-wire wire-two"></div>
+                <div class="part-label label-chassis">01 / CHASSIS</div>
+                <div class="part-label label-wheels">02 / DRIVE WHEELS</div>
+                <div class="part-label label-board">03 / ESP32 CONTROLLER</div>
+                <div class="part-label label-sensors">04 / DISTANCE SENSOR</div>
+                <div class="part-label label-power">05 / BATTERY</div>
+                <div class="exploded-axis"></div>
               </div>
-              <div class="scene-label label-esp">ESP32 DEV BOARD</div><div class="scene-label label-sensor">ULTRASONIC / IR</div>
-              <div class="scene-ground"></div>
+              <div class="exploded-note">PARTS SEPARATE → ALIGN → ASSEMBLE</div>
             </div>
             <div class="art-sun"></div><div class="art-ring ring-one"></div><div class="art-ring ring-two"></div>
             <svg class="robot-drawing" viewBox="0 0 360 390" role="img" aria-label="Abstract line-art robot">
