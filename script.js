@@ -132,6 +132,27 @@
     }, { threshold: 0.12 });
     revealTargets.forEach(el => { el.classList.add("reveal"); observer.observe(el); });
   }
+
+  // Homepage search: match the query to an existing section and scroll there.
+  const siteSearch = document.getElementById("siteSearch");
+  const siteSearchInput = document.getElementById("siteSearchInput");
+  siteSearch?.addEventListener("submit", event => {
+    event.preventDefault();
+    const query = (siteSearchInput?.value || "").trim().toLocaleLowerCase();
+    if (!query) { siteSearchInput?.focus(); return; }
+    const sections = [...document.querySelectorAll("main section[id]")];
+    const match = sections.find(section => section.id !== "home" && section.textContent.toLocaleLowerCase().includes(query));
+    if (match) {
+      match.scrollIntoView({ behavior: "smooth", block: "start" });
+      match.classList.add("search-highlight");
+      window.setTimeout(() => match.classList.remove("search-highlight"), 1300);
+    } else if (siteSearchInput) {
+      siteSearchInput.setCustomValidity("No matching section found. Try team, robotics, projects, or activities.");
+      siteSearchInput.reportValidity();
+      siteSearchInput.addEventListener("input", () => siteSearchInput.setCustomValidity(""), { once: true });
+    }
+  });
+
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 })();
