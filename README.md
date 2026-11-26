@@ -1,3 +1,5 @@
+<p align="center"><img src="https://raw.githubusercontent.com/lokilancer/TMMV-ROBOTICS/main/assets/loki-lancer-horse.svg" width="112" alt="Loki Lancer blue horse logo"></p>
+
 <div align="center">
 
 # TMMV Robotics
@@ -85,3 +87,7 @@ The site is published with GitHub Pages:
 Built with curiosity in Sri Lanka.
 
 </div>
+
+---
+
+<p align="center">Made by <strong>Loki Lancer</strong></p>
